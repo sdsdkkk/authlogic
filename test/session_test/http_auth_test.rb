@@ -2,7 +2,7 @@ require 'test_helper'
 
 module SessionTest
   class HttpAuthTest < ActiveSupport::TestCase
-    class ConfiTest < ActiveSupport::TestCase
+    class ConfigTest < ActiveSupport::TestCase
       def test_allow_http_basic_auth
         UserSession.allow_http_basic_auth = false
         assert_equal false, UserSession.allow_http_basic_auth
