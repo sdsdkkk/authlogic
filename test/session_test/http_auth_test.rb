@@ -28,6 +28,8 @@ module SessionTest
 
     class InstanceMethodsTest < ActiveSupport::TestCase
       def test_persist_persist_by_http_auth
+        UserSession.allow_http_basic_auth = true
+
         aaron = users(:aaron)
         http_basic_auth_for do
           refute UserSession.find
